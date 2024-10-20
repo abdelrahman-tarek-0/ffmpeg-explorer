@@ -16,6 +16,7 @@
   <Modal
     bind:showModal
     onConfirm={() => {
+     // force update the ui
       modalInputs = [
         ...selectedFilter.inputs.filter((i) => i === "v" || i === "a"),
         ...modalInputs,
@@ -27,7 +28,7 @@
 
       selectedFilter.inputs = modalInputs;
       selectedFilter.outputs = modalOutputs;
-      selectedFilter.isCustom = true;
+      selectedFilter.isCustom = true; // for handling the ordering of the inputs in the previewCommand in store.js
 
       add(selectedFilter);
       selectedFilter = null;
