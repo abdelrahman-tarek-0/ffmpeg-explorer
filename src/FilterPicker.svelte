@@ -1,8 +1,9 @@
 <script>
   import uFuzzy from "@leeoniya/ufuzzy";
   import FILTERS from "./filters.json";
-
+  import Modal from "./Modal.svelte";
   import { addNode } from "./stores.js";
+  import DynamicFilterModal from "./DynamicFilterModal.svelte";
 
   export let select = "video";
   $: selectedFilters = selectFilters(select);
@@ -101,6 +102,13 @@
     {/each}
   </div>
 </div>
+
+{#if showModal}
+  <DynamicFilterModal 
+    bind:showModal
+    selectedFilter={selectedFilter}
+  />
+{/if}
 
 <style>
   .holder {
