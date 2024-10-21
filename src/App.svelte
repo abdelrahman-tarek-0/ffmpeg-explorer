@@ -31,6 +31,7 @@
     { name: "Slow Down Smoothly", url: "/examples/smooth_slow.json" },
     { name: "Video Grid", url: "/examples/grid.json" },
     { name: "Mirror", url: "/examples/mirror.json" },
+    { name: "Cut Parts From Video And Audio", url: "/examples/trim-concat.json" },
   ];
 
   let videoValue = "/" + $inputs[0].name;
