@@ -12,8 +12,6 @@
 
   let selectedFilter = null;
   let showModal = false;
-  let modalInputs = [];
-  let modalOutputs = [];
 
   const uf = new uFuzzy();
 
@@ -86,8 +84,6 @@
           ) {
             // deep copy current filter data so when overwriting it, it doesn't affect the original
             selectedFilter = {...f, inputs: [...f.inputs], outputs: [...f.outputs]};
-            modalInputs = [];
-            modalOutputs = [];
             showModal = true;
           } else {
             add(f);
