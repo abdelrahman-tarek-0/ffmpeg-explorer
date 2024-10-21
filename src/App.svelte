@@ -121,7 +121,7 @@
       );
       if (outname.endsWith("mp4")) {
         setTimeout(() => {
-          vidPlayerRef.seekToNextFrame();
+          vidPlayerRef?.seekToNextFrame?.();
         }, 100);
       }
     } catch (e) {
