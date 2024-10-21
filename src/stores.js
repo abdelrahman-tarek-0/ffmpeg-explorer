@@ -168,7 +168,7 @@ export const previewCommand = derived([edges, nodes], ([$edges, $nodes]) => {
     const getMappers = fg.match(/\[out_\d+\]/g) || [] // get all the out_0 out_1 etc
 
     for (let m of getMappers) {
-      finalCommand.push('-map', m)
+      finalCommand.push('-map', `"${m}"`)
    }
 
     for (let m of mediaMaps) {
